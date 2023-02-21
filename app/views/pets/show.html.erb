@@ -1,0 +1,10 @@
+<h1><%= @pet.name %></h1>
+
+<p>Found on <%= @pet.address %></p>
+<p><%= @pet.found_days_ago %> days ago</p>
+
+<%= link_to "Edit this pet", edit_pet_path(@pet) %>
+<%= link_to "This pet has been found!❤️", pet_path(@pet), data: {
+  turbo_method: :delete,
+  turbo_confirm: 'Oui?'
+} %>
